@@ -10,6 +10,21 @@ public class SearchIn2DArray {
         int target = 45;
         int[] ans = search(arr, target); // format of return value {row, column}
         System.out.println(Arrays.toString(ans));
+        int max = maximum(arr);
+        System.out.println(max);
+    }
+
+    // find max in 2d array
+    static int maximum(int[][] arr) {
+        int max = Integer.MIN_VALUE;
+        for (int row = 0; row < arr.length; row++) {
+            for (int column = 0; column < arr[row].length; column++) {
+                if (arr[row][column] > max) {
+                    max = arr[row][column];
+                }
+            }
+        }
+        return max;
     }
 
     // asuming arr[] != 0
