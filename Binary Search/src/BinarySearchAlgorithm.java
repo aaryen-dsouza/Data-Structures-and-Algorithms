@@ -1,3 +1,11 @@
+/*
+divide array into start, end and mid
+remember the mid will always be the ans so iterate it in the loop
+if mid > target -> end = mid -1
+if mid < target -> start = mid + 1
+if start > end then return -1
+ */
+
 public class BinarySearchAlgorithm {
     public static void main(String[] args) {
     int[] arr = {-19, -8, -2, 1, 4, 5, 7, 9, 10, 17, 21, 28};
