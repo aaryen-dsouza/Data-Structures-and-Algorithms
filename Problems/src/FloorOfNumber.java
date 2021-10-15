@@ -8,6 +8,10 @@ public class FloorOfNumber {
     }
 
     static int flooring(int[] arr, int target){
+        if(target < arr[0]){
+            return -1;
+        }
+
         int start = 0;
         int end = arr.length - 1;
 
