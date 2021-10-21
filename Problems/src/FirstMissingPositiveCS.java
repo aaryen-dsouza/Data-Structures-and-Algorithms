@@ -1,4 +1,6 @@
-public class FIrstMissingPositiveCS {
+// https://leetcode.com/problems/first-missing-positive/
+
+public class FirstMissingPositiveCS {
     public static void main(String[] args) {
         int[] nums = {3,4,-1,1};
         int i = 0;
