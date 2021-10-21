@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class FindDuplicatesInArray {
+public class FindDuplicatesInArrayCS {
     public static void main(String[] args) {
         int[] nums = {4,3,2,7,8,2,3,1};
         int i = 0;
