@@ -6,6 +6,9 @@ public class CycleSort {
         cyclicSort(arr);
     }
 
+    /* helpful when 1 to n is linear,
+   places the element wrt to its index position */
+    
     static void cyclicSort(int[] arr){
         int i = 0;
         while (i < arr.length) {
