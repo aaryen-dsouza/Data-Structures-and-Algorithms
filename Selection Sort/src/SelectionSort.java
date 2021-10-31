@@ -6,6 +6,10 @@ public class SelectionSort {
         selectionSort(arr);
     }
 
+    /* searches for the max element and checks if it is the last element of the array
+    if not then swap with the last pos
+    decrement end everytime we swap so that the space decreases after every traversal */
+    
     static void selectionSort(int[] arr){
         int end = arr.length - 1;
         for (int i = 0; i <= arr.length - 1; i++){
