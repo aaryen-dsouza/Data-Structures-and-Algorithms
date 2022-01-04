@@ -14,4 +14,15 @@ public class SkipString {
             return unProcessed.charAt(0) + skipString(unProcessed.substring(1));
         }
     }
+
+    static String appNotApple(String unProcessed) {
+        if(unProcessed.isEmpty()) {
+            return "";
+        }
+        if (unProcessed.startsWith("app") && !unProcessed.startsWith("apple")) {
+            return skipString(unProcessed.substring((3)));
+        } else {
+            return unProcessed.charAt(0) + skipString(unProcessed.substring(1));
+        }
+    }
 }
