@@ -4,8 +4,9 @@ import java.util.List;
 public class MazeDR {
     public static void main(String[] args) {
 //        System.out.println(count(3, 3));
-        path("", 3, 3);
-        System.out.println(pathList("", 3, 3));
+//        path("", 3, 3);
+//        System.out.println(pathList("", 3, 3));
+        System.out.println(pathListDiagonal("", 3, 3));
     }
 
 
@@ -44,6 +45,26 @@ public class MazeDR {
         }
         if (c > 1) {
             list.addAll(pathList(p + 'R', r, c - 1));
+        }
+
+        return list;
+    }
+
+    static List<String> pathListDiagonal(String p, int r, int c) {
+        if (r == 1 && c == 1) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+        ArrayList<String> list = new ArrayList<>();
+        if (r > 1 && c > 1) {
+            list.addAll(pathListDiagonal(p + 'D', r - 1, c - 1));
+        }
+        if (r > 1) {
+            list.addAll(pathListDiagonal(p + 'V', r - 1, c));
+        }
+        if (c > 1) {
+            list.addAll(pathListDiagonal(p + 'H', r, c - 1));
         }
 
         return list;
